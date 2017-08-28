@@ -1,0 +1,111 @@
+body
+{
+	background-color:#666600;
+	margin: 25px;
+}
+header
+{
+	border-bottom: 1px solid yellow;
+	height: 100px;
+}
+.tytulowy
+{
+	width:37%;
+	float:left;
+	height:100px;
+}
+.tytul
+{
+	font-size:25px;
+	padding-top: 10px;
+	font-weight: bold;
+
+}
+.podtytul
+{
+	margin-top:0px;
+	font-size:14px;
+	padding-bottom:20px;
+}
+.wyszukiwarka
+{
+	float:left;
+	width:37%;
+	margin-top:30px;
+}
+.TwojKoszykTekst
+{
+	float:left;
+	margin-top:30px;
+	width:8%;
+}
+.TwojKoszykTekst:hover
+{
+    cursor: pointer;
+}
+.DodajDoKoszykaLink
+{
+    border: 2px ridge yellow; 
+    text-align:center
+}
+.DodajDoKoszykaLink:hover
+{
+     cursor: pointer;
+}
+.TwojKoszyk
+{
+	background-color: #CCCC33;
+	width:14%;
+	float:left;
+	padding:10px;
+	font-size:15px;
+	margin-top:20px;
+	text-align: center;
+}
+section
+{
+	clear:both;
+}
+.section1tytul
+{
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 18px;
+}
+.table1
+{
+	margin: 0 auto;
+	width:95%;
+	margin-top:20px;	
+	border-radius: 10px;
+}
+.table1 th
+{
+	border: 2px ridge yellow;	
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+	border-bottom: none;
+}
+.table2
+{
+	margin: 0 auto;
+	border: 2px ridge yellow;
+	width:95%;
+}
+.table2 td
+{
+	border: 1px ridge #333300;
+}
+.table2 th
+{
+	text-align: left;
+}
+.FormLabel
+{
+    width: 1000px;    
+}
+.FormLabelSpan
+{
+    margin-right: 6px; 
+    text-align: right;
+}

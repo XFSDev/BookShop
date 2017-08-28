@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KsiegarniaContextmdfModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Ksiazka">
+      <EntityTypeMapping TypeName="KsiegarniaContext.mdfModel.Ksiazka">
+        <MappingFragment StoreEntitySet="Ksiazka">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="DataWydania" ColumnName="DataWydania" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Autor" ColumnName="Autor" />
+          <ScalarProperty Name="Wydawnictwo" ColumnName="Wydawnictwo" />
+          <ScalarProperty Name="Audiobook" ColumnName="Audiobook" />
+          <ScalarProperty Name="Ebook" ColumnName="Ebook" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

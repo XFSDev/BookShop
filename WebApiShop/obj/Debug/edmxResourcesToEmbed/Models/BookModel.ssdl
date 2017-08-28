@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KsiegarniaContext.mdfModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ksiazka">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar(max)" />
+    <Property Name="DataWydania" Type="datetime" Nullable="false" />
+    <Property Name="Cena" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Autor" Type="nvarchar(max)" />
+    <Property Name="Wydawnictwo" Type="nvarchar(max)" />
+    <Property Name="Audiobook" Type="bit" Nullable="false" />
+    <Property Name="Ebook" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="KsiegarniaContextmdfModelStoreContainer">
+    <EntitySet Name="Ksiazka" EntityType="Self.Ksiazka" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
