@@ -1,5 +1,5 @@
 ﻿import { Injectable, Pipe, PipeTransform } from '@angular/core';
-import { Book } from './Book';
+import { Book } from './Book/BookModel';
 
 @Pipe({
     name: 'FilterBook',

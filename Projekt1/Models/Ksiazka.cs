@@ -17,6 +17,6 @@ namespace Projekt1.Models
         public bool Ebook { get; set; }
         public bool Okazja { get; set; }
         
-        public virtual Nosnik Nosniki { get; set; }
+        public virtual ICollection<Nosnik> Nosniki { get; set; }
     }
 }

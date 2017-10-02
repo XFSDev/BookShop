@@ -30,7 +30,7 @@ var table1 = (function () {
     table1 = __decorate([
         core_1.Component({
             selector: 't',
-            template: "<table class=\"table1\">\n                <tr>\n                <th><a href=\"#\" (click)=\"thClicked(1)\"> Wszystkie</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(2)\"> Audiobooki</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(3)\"> E-book</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(4)\"> Nowo\u015Bci</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(5)\"> Zapowiedzi</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(6)\"> Super Okazje</a></th>\n               <tr></table>\n               ",
+            template: "<tr>\n                <th><a href=\"#\" (click)=\"thClicked(1)\"> Wszystkie</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(2)\"> Audiobooki</a></th>\n                <th><a href=\"#\" (click)=\"thClicked(3)\"> E-book</a></th>\n               <tr>\n               ",
         })
     ], table1);
     return table1;

@@ -1,0 +1,23 @@
+﻿<form class="ShopingForm" [formGroup]="CartItems" (ngSubmit)="onSubmit(CartItems)">
+    <label class="FormLabel">
+        <span class="FormLabelSpan">Tytul: </span>
+        <input style="width: 200px; height: 30px" type="text" formControlName="Nazwa" placeholder={{ShopingCartTytle}} value='ShopingCartTytle' readonly>
+    </label><br>
+
+    <label class="FormLabel">
+        <span class="FormLabelSpan">Nosnik: </span>
+        <select formControlName="Nosnik" style="clear:both; width: 200px; height: 30px; text-align:left; margin-left: 0px;">
+            <option *ngFor="let item of carrierItemView" [value]="item">{{item}}</option>
+        </select>
+    </label> <p *ngIf="CartItems.get('Nosnik').dirty &&
+            CartItems.get('Nosnik').hasError('required')">Wybierz rodzaj nosnika!</p><br>
+
+    <label class="FormLabel">
+        <span style="margin-right: 6px; text-align: right;">Ilosc: </span>
+        <input style="width: 200px; height: 30px" type="number" value=1 formControlName="Ilosc">
+    </label><p *ngIf="CartItems.get('Ilosc').dirty &&
+                CartItems.get('Ilosc').hasError('required')">Wprowadz ilosc!</p><p *ngIf="CartItems.errors?.outsideRange && CartItems.get('Ilosc').dirty">Podaj ilosc z przedzialu 1-999!</p><br>
+
+    <button [disabled]="CartItems.invalid" type="submit" keyup.enter="onSubmit(CartItems)">Ok</button>
+    <button (click)="Cancel()">Anuluj</button>
+</form>

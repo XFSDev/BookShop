@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Projekt1.Infrastructure
 {
-    public class CarrierManager : IGetCarriers<Nosnik>
+    public class CarrierManager : IGetCarriers
     {
         KsiegarniaContext db = null;
         public CarrierManager()
@@ -20,10 +20,17 @@ namespace Projekt1.Infrastructure
             this.db = context;
         }
 
-        public Nosnik GetCarrierByBookId(int id)
+        public List<string> GetCarrierByBookId(int id)
         {
-            return db.Nosniki.Where(m =>m.Id==id).First();
-             
+            Ksiazka ksiazka = db.Ksiazki.Where(m => m.Id == id).First();
+            var nosnikList = ksiazka.Nosniki;
+            List<string> data= new List<string>();
+            foreach (Nosnik item in nosnikList)
+            {
+                data.Add(item.Rodzaj);
+            }
+            //var data= db.Nosniki.Where(m => m.ksiazki.Select( n=> n.Id).Contains(id));
+            return data;            
         }
     }
 }

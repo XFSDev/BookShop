@@ -10,18 +10,22 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var http_1 = require("@angular/http");
-var BookService_1 = require("./BookService");
+var BookService_1 = require("./Book/BookService");
+var BookSearch_component_1 = require("./Book/BookSearch.component");
+var ShoppingCardService_1 = require("./ShoppingCard/ShoppingCardService");
 var Filter_1 = require("./Filter");
+var CarrierService_1 = require("./ShoppingCard/Carrier/CarrierService");
 var forms_1 = require("@angular/forms");
 var NgInit_1 = require("./NgInit");
+var BookOverlapCategory_component_1 = require("./Book/BookOverlapCategory.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
-            declarations: [app_component_1.AppComponent, Filter_1.FilterBook, NgInit_1.NgInit],
-            providers: [BookService_1.BookService],
+            declarations: [app_component_1.AppComponent, BookSearch_component_1.BookSearchComponent, BookOverlapCategory_component_1.BookOverlapCategory, Filter_1.FilterBook, NgInit_1.NgInit],
+            providers: [BookService_1.BookService, CarrierService_1.CarrierService, ShoppingCardService_1.ShoppingCardService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

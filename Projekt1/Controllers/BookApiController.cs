@@ -1,19 +1,9 @@
-﻿using Newtonsoft.Json;
-using Projekt1.Infrastructure;
-using Projekt1.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using Projekt1.Infrastructure;
 using System.Net.Http;
-using System.Text;
-using System.Web.Http;
-using System.Web.Http.Results;
-using System.Web.Mvc;
 
 namespace Projekt1.Controllers
-{   
-    
+{
+
     public class BookApiController : BaseApiController
     {
         BookManager _BookManager = null;

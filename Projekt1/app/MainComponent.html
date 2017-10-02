@@ -1,0 +1,43 @@
+﻿<body>
+    <header>
+        <div class="tytulowy">
+            <div class="tytul">Ksiegarnia Internetowa</div><br>
+            <div class="podtytul">Nasze sklepy prowadzimy z pasja!</div>
+        </div>
+        <BookSearch *ngIf="ShopCart==false" (ClickOn)="setFilterArgs($event)"></BookSearch>
+        <div class="TwojKoszykTekst" (click)="ShowShoppingCart()">Twoj koszyk:</div>
+        <div class="TwojKoszyk">Liczba produktow: {{ShopingCartAmount}}</div>
+    </header>
+    <section>
+        <div class="section1tytul">Katalog ksiazek</div>
+        <div *ngIf="ShopItemShow">
+            <BookOverlapCategory (ClickCategory)="getBooks($event)"></BookOverlapCategory>               
+            <table class="table2">
+                <tr>
+                    <th>Nazwa</th>
+                    <th>Data wydania</th>
+                    <th>Cena</th>
+                    <th>Autor</th>
+                    <th>Wydawnictwo</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let Book of books | FilterBook:filterargs">
+                    <td>{{Book.Nazwa}}</td>
+                    <td>{{Book.DataWydania}}</td>
+                    <td>{{Book.Cena}}</td>
+                    <td>{{Book.Autor}}</td>
+                    <td>{{Book.Wydawnictwo}}</td>
+                    <td class="DodajDoKoszykaLink" *ngIf="(books | FilterBook:filterargs).length>0" (click)="AddToShoppingCart(Book.Id, Book.Nazwa)">do koszyka</td>
+                </tr>
+                <tr *ngIf="(books | FilterBook:filterargs).length===0"><td colspan="8" [ngInit]="Alert()">Brak wynikow!</td></tr>
+            </table>
+        </div>
+
+        <div *ngIf="CartItemForm" style="text-align: center;">
+            <ShoppingCardForm></ShoppingCardForm>           
+        </div>
+        <div *ngIf="ShopCart">
+           <ShoppingCard></ShoppingCard>
+        </div>
+    </section>`
+</body>

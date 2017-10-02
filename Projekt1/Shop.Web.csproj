@@ -143,6 +143,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Book\BookOverlapCategory.html" />
+    <Content Include="app\MainComponent.html" />
+    <Content Include="app\ShoppingCard\ShopCard.html" />
+    <Content Include="app\ShoppingCard\ShoppingCartForm.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -154,6 +158,7 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <None Include=".bin\node.cmd" />
+    <Content Include="app\Book\BookSearch.html" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -186,6 +191,18 @@
     <Compile Include="Migrations\201708230236328_nowa.cs" />
     <Compile Include="Migrations\201708230236328_nowa.Designer.cs">
       <DependentUpon>201708230236328_nowa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710021735396_edycja nosnika.cs" />
+    <Compile Include="Migrations\201710021735396_edycja nosnika.Designer.cs">
+      <DependentUpon>201710021735396_edycja nosnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710021815073_edycja nosnika2.cs" />
+    <Compile Include="Migrations\201710021815073_edycja nosnika2.Designer.cs">
+      <DependentUpon>201710021815073_edycja nosnika2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710021833018_edycja nosnika3.cs" />
+    <Compile Include="Migrations\201710021833018_edycja nosnika3.Designer.cs">
+      <DependentUpon>201710021833018_edycja nosnika3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Ksiazka.cs" />
@@ -221,13 +238,19 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\Book.ts" />
-    <TypeScriptCompile Include="app\BookService.ts" />
-    <TypeScriptCompile Include="app\carrier.ts" />
+    <TypeScriptCompile Include="app\Book\BookModel.ts" />
+    <TypeScriptCompile Include="app\Book\BookOverlapCategory.component.ts" />
+    <TypeScriptCompile Include="app\Book\BookSearch.component.ts" />
+    <TypeScriptCompile Include="app\Book\BookService.ts" />
+    <TypeScriptCompile Include="app\ShoppingCard\Carrier\CarrierModel.ts" />
     <TypeScriptCompile Include="app\Filter.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\NgInit.ts" />
-    <TypeScriptCompile Include="app\ShopingCartItem.ts" />
+    <TypeScriptCompile Include="app\ShoppingCard\Carrier\CarrierService.ts" />
+    <TypeScriptCompile Include="app\ShoppingCard\ShoppingCard.component.ts" />
+    <TypeScriptCompile Include="app\ShoppingCard\ShoppingCardModel.ts" />
+    <TypeScriptCompile Include="app\ShoppingCard\ShoppingCardService.ts" />
+    <TypeScriptCompile Include="app\ShoppingCard\ShoppingCartForm.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -241,6 +264,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708230236328_nowa.resx">
       <DependentUpon>201708230236328_nowa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710021735396_edycja nosnika.resx">
+      <DependentUpon>201710021735396_edycja nosnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710021815073_edycja nosnika2.resx">
+      <DependentUpon>201710021815073_edycja nosnika2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710021833018_edycja nosnika3.resx">
+      <DependentUpon>201710021833018_edycja nosnika3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

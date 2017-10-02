@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Projekt1.Infrastructure
 {
-    public interface IGetCarriers <T> where T: class
+    public interface IGetCarriers
     {
-        T GetCarrierByBookId(int id);
+       List<string> GetCarrierByBookId(int id);
     }
 }

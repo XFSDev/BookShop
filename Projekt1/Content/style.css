@@ -72,14 +72,14 @@ section
 	font-weight: bold;
 	padding-top: 18px;
 }
-.table1
+.CategoryTable
 {
 	margin: 0 auto;
 	width:95%;
 	margin-top:20px;	
 	border-radius: 10px;
 }
-.table1 th
+.CategoryTable th
 {
 	border: 2px ridge yellow;	
 	border-top-right-radius:10px;
